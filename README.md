@@ -13,4 +13,19 @@ una vez que tengamos el ambiente activado vamos a correr:
 pip install requeriments.txt
 ```
 
+### TODO 
+    (Mati y Ceci)
+    -Crear un app 
+    ```bash
+        py manage.py startapp MundoKid
+    ```
+
+    -Traernos todo el front (Hugo)
+
+    (A definir)
+    -Crear 4 templates
+        --Home
+        --Juegos
+        --Contacto
+        --Base (Header y Footer)
 
