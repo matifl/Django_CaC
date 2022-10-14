@@ -14,12 +14,6 @@ pip install requeriments.txt
 ```
 
 ### TODO 
-    (Mati y Ceci)
-    -Crear un app 
-    ```bash
-        py manage.py startapp MundoKid
-    ```
-
     -Traernos todo el front (Hugo)
 
     (A definir)
@@ -29,3 +23,4 @@ pip install requeriments.txt
         --Contacto
         --Base (Header y Footer)
 
+    -En caso de necesitar modificar el settings.py de TP_Integrador
