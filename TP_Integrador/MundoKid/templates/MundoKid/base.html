@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>{% block title %}{% endblock %} MundoKid</title>
+    <!-- Estilos y fuentes del template  -->
+    </head>
+    <body>
+    <header>
+    <!-- Navegación -->
+        <nav>
+            <div>    
+                <h2> Menú</h2>
+            </div>
+            <div>  
+                <ul>
+                    <li>
+                        <a href="{% url 'home' %}">Home</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'juegos' %}">Juegos</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'contacto' %}">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- Cabecera -->
+
+    <!--Contenido-->
+    <main>
+       {% block content %}{% endblock %}
+    </main>
+    <!-- Pié de página -->
+    <footer>
+    </footer>
+
+    <!-- Bootstrap y Javascripts -->
+  </body>
+</html>

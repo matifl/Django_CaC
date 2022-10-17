@@ -18,6 +18,11 @@ from django.urls import path
 from MundoKid import views
 
 urlpatterns = [
+    path('',views.home,name="home"),
+    path('home/',views.home,name="home"),
+    path('juegos/',views.juegos,name="juegos"),
+    path('contacto/',views.contacto,name="contacto"),
     path('admin/', admin.site.urls),
-    path('home/',views.Home,name="Home"),
+    
+
 ]
