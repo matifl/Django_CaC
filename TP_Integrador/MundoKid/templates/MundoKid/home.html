@@ -1,7 +1,313 @@
 {% extends 'MundoKid/base.html' %}
 
+{% block title %}Portada{% endblock %}
+{% comment %} {% block background %}{% load static %}{% static 'core/img/home-bg.jpg' %}{% endblock%} {% endcomment %}
+
 {% block content %}
-    <h2>Portada</h2>
-    <p>Esto es una portada</p>
+            {% load static %}
+   			<!-- banner start -->
+			<!-- ================ -->
+			<div class="banner clearfix">
+
+				<!-- slideshow start -->
+				<!-- ================ -->
+				<div class="slideshow">
+					
+					<!-- slider revolution start -->
+					<!-- ================ -->
+					<div class="slider-banner-container">
+						<div class="slider-banner-fullwidth">
+							<ul class="slides">
+								<!-- slide 1 start -->
+								<!-- ================ -->
+								<li data-transition="fadefromright" data-slotamount="4" data-masterspeed="500" data-saveperformance="on" data-title="Inflables">
+								
+								<!-- main image -->
+								<img src="{% static 'MundoKid/images/slider/slide-1.jpg' %}" alt="Inflables" data-bgposition="center top"  data-bgrepeat="no-repeat" data-bgfit="cover">
+								
+								<!-- Transparent Background -->
+								<div class="tp-caption dark-translucent-bg"
+									data-x="center"
+									data-y="bottom"
+									data-speed="300"
+									data-start="0">
+								</div>
+
+								<!-- LAYER NR. 1 -->
+								<div class="tp-caption sfb fadeout text-center large_white"
+									data-x="center"
+									data-y="140"
+									data-speed="500"
+									data-start="1000"
+									data-easing="easeOutQuad"
+									data-end="10000">Inflables
+								</div>	
+
+								<!-- LAYER NR. 2 -->
+								<div class="tp-caption sfb fadeout text-center medium_white"
+									data-x="center"
+									data-y="220" 
+									data-speed="500"
+									data-start="1300"
+									data-easing="easeOutQuad"
+									data-endspeed="600"> Varias opciones desde 2 x 2 hasta 3 x 6 mts.
+								</div>
+
+								<!-- LAYER NR. 6 -->
+								<div class="tp-caption sfb fadeout small_white"
+									data-x="center"
+									data-y="300"
+									data-speed="500"
+									data-start="1600"
+									data-easing="easeOutQuad"
+									data-endspeed="600"><a href="{% url 'inflables' %}" class="btn btn-default-transparent btn-lg btn-animated">Ver más <i class="fa fa-plus"></i></a>
+								</div>
+
+								</li>
+								<!-- slide 1 end -->
+
+								<!-- slide 2 start -->
+								<!-- ================ -->
+								<li data-transition="fadefromright" data-slotamount="4" data-masterspeed="500" data-saveperformance="on" data-title="Plazas Blandas">
+								
+								<!-- main image -->
+								<img src="{% static 'MundoKid/images/slider/slide-2.jpg' %}" alt="Plazas Blandas" data-bgposition="center top"  data-bgrepeat="no-repeat" data-bgfit="cover">
+
+								<!-- Transparent Background -->
+								<div class="tp-caption dark-translucent-bg"
+									data-x="center"
+									data-y="bottom"
+									data-speed="600"
+									data-start="0">
+								</div>
+
+								<!-- LAYER NR. 1 -->
+								<div class="tp-caption sfb fadeout large_white"
+									data-x="center"
+									data-y="140"
+									data-speed="500"
+									data-start="1000"
+									data-easing="easeOutQuad"
+									data-end="10000">Plazas Blandas
+								</div>	
+
+								<!-- LAYER NR. 2 -->
+								<div class="tp-caption sfb fadeout text-left medium_white"
+									data-x="center"
+									data-y="220" 
+									data-speed="500"
+									data-start="1300"
+									data-easing="easeOutQuad"
+									data-endspeed="600"> Desde 6 elementos hasta los que quieras.
+								</div>
+
+								<!-- LAYER NR. 6 -->
+								<div class="tp-caption sfb fadeout small_white"
+									data-x="center"
+									data-y="300"
+									data-speed="500"
+									data-start="2500"
+									data-easing="easeOutQuad"
+									data-endspeed="600"><a href="{% url 'plazas_blandas' %}" class="btn btn-default-transparent btn-lg btn-animated">Ver más <i class="fa fa-plus"></i></a>
+								</div>
+
+								</li>
+								<!-- slide 2 end -->
+
+								<!-- slide 3 start -->
+								<!-- ================ -->
+								<li data-transition="fadefromright" data-slotamount="4" data-masterspeed="500" data-saveperformance="on" data-title="Juegos">
+								
+								<!-- main image -->
+								<img src="{% static 'MundoKid/images/slider/slide-3.jpg' %}" alt="Juegos" data-bgposition="center top"  data-bgrepeat="no-repeat" data-bgfit="cover">
+
+								<!-- Transparent Background -->
+								<div class="tp-caption dark-translucent-bg"
+									data-x="center"
+									data-y="bottom"
+									data-speed="600"
+									data-start="0">
+								</div>
+
+								<!-- LAYER NR. 1 -->
+								<div class="tp-caption sfb fadeout large_white"
+									data-x="center"
+									data-y="140"
+									data-speed="500"
+									data-start="1000"
+									data-easing="easeOutQuad"
+									data-end="10000">Juegos
+								</div>	
+
+								<!-- LAYER NR. 2 -->
+								<div class="tp-caption sfb fadeout text-left medium_white"
+									data-x="center"
+									data-y="220" 
+									data-speed="500"
+									data-start="1300"
+									data-easing="easeOutQuad"
+									data-endspeed="600"> Tejo, metegol, ping pong, sapo.
+								</div>
+
+								<!-- LAYER NR. 6 -->
+								<div class="tp-caption sfb fadeout small_white"
+									data-x="center"
+									data-y="300"
+									data-speed="500"
+									data-start="2500"
+									data-easing="easeOutQuad"
+									data-endspeed="600"><a href="{% url 'juegos' %}" class="btn btn-default-transparent btn-lg btn-animated">Ver más <i class="fa fa-plus"></i></a>
+								</div>
+
+								</li>
+								<!-- slide 3 end -->
+
+							
+							</ul>
+							<div class="tp-bannertimer"></div>
+						</div>
+					</div>
+					<!-- slider revolution end -->
+
+				</div>
+				<!-- slideshow end -->
+
+			</div>
+			<!-- banner end -->
+
+
+			<div id="page-start"></div>
+			<div class="row">
+				<div class="banderines">
+				</div>
+			</div>
+
+			<!-- section start -->
+			<!-- ================ -->
+			<section  class="section pv-40 border-clear">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2">
+							<h2 class="text-center">Mundo Kid</h2>
+							<p class="large text-center">Tenemos más de 15 años de experiencia en fiestas infantiles.</p>
+						</div>
+						<div class="col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-0">
+							<div class="pv-30 feature-box text-center object-non-visible animated object-visible fadeInDownSmall" data-animation-effect="fadeInDownSmall" data-effect-delay="100">
+								<span class="icon default-bg circle"><i class="icon-heart"></i></span>
+								<h3>Atención personalizada</h3>
+								<div class="separator clearfix"></div>
+								<p>Atendido por sus propios dueños.</p>
+							</div>
+						</div>
+						<div class="col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-0">
+							<div class="pv-30 feature-box text-center object-non-visible animated object-visible fadeInDownSmall" data-animation-effect="fadeInDownSmall" data-effect-delay="100">
+								<span class="icon celeste circle"><i class="icon-picture"></i></span>
+								<h3>Múltiples propuestas</h3>
+								<div class="separator clearfix"></div>
+								<p>Nos renovamos constantemente para tener los mejores y más nuevos productos del mercado.</p>
+							</div>
+						</div>
+						<div class="col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-0">
+							<div class="pv-30 feature-box text-center object-non-visible animated object-visible fadeInDownSmall" data-animation-effect="fadeInDownSmall" data-effect-delay="100">
+								<span class="icon verde circle"><i class="icon-star-filled"></i></span>
+								<h3>Calidad garantizada</h3>
+								<div class="separator clearfix"></div>
+								<p>Nuestras propuestas aseguran la diversión en tu evento.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- section end -->
+
+			<section class="banderines-fondo pv-40">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2">
+							<h2 class="text-center"><span class="txt-blanco txt-shadow">Te gusta Mundo Kid?</span></h2>
+							<div class="separator"></div>
+							<p class="large text-center txt-blanco">Danos un "Me Gusta" en Facebook y enterate de todas las novedades. </p>
+							
+						</div>
+						<div class="col-md-4 col-md-offset-4">
+							<div class="fb-page" data-href="https://www.facebook.com/" data-width="400" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="false" data-show-posts="false"></div>
+						</div> 
+					</div>
+				</div>
+			</section>
+
+			<!-- section start -->
+			<!-- ================ -->
+			<section class="section clearfix">
+				<div class="container">
+					<h3>NUESTRAS NOVEDADES</h3>
+					<div class="separator-2"></div>
+					<div class="row grid-space-10">
+						<div class="col-sm-6 col-md-3">
+							<div class="image-box style-2 mb-20 shadow bordered light-gray-bg text-center">
+								<div class="overlay-container">
+									<img src="{% static 'MundoKid/images/novedades/plasmacar.jpg' %}" alt="Plasmacar">
+									<div class="overlay-to-top">
+										<p class="small margin-clear">Una propuesta diferente! No te la podés perder.</p>
+									</div>
+								</div>
+								<div class="body">
+									<h3>Plasmacar</h3>
+									<div class="separator"></div>
+									<p>¿Querés algo nuevo? Con esta opción todos disfrutan.</p>
+								</div>
+							</div>
+						</div>
+						<div class="clearfix visible-sm"></div>
+						<div class="col-sm-6 col-md-3">
+							<div class="image-box style-2 mb-20 shadow bordered light-gray-bg text-center">
+								<div class="overlay-container">
+									<img src="{% static 'MundoKid/images/novedades/cocina-rotoys.jpg' %}" alt="Cocina">
+									<div class="overlay-to-top">
+										<p class="small margin-clear">Juega a cocinar como mamá</p>
+									</div>
+								</div>
+								<div class="body">
+									<h3>Cocina Rotoys</h3>
+									<div class="separator"></div>
+									<p>El juego ideal, donde los chicos cocinan como Mamá</p>
+								</div>
+							</div>
+						</div>
+						<div class="clearfix visible-sm"></div>
+						<div class="col-sm-6 col-md-3">
+							<div class="image-box style-2 mb-20 shadow bordered light-gray-bg text-center">
+								<div class="overlay-container">
+									<img src="{% static 'MundoKid/images/novedades/almacen.jpg' %}" alt="Almacén">
+									<div class="overlay-to-top">
+										<p class="small margin-clear">El almacén del barrio</p>
+									</div>
+								</div>
+								<div class="body">
+									<h3>Almacén</h3>
+									<div class="separator"></div>
+									<p>El sueño de todos los chicos, poder jugar en un Gran Almacén</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-3">
+							<div class="image-box style-2 mb-20 shadow bordered light-gray-bg text-center">
+								<div class="overlay-container">
+									<img src="{% static 'MundoKid/images/novedades/ping-pong-1.jpg' %}" alt="Ping Pong">
+									<div class="overlay-to-top">
+										<p class="small margin-clear">Mesa de Ping Pong</p>
+									</div>
+								</div>
+								<div class="body">
+									<h3>Ping Pong</h3>
+									<div class="separator"></div>
+									<p>Jugá a lo grande y se un campeón!</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- section end -->
+
 {% endblock %}
-   
