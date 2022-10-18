@@ -21,6 +21,8 @@ urlpatterns = [
     path('',views.home,name="home"),
     path('home/',views.home,name="home"),
     path('juegos/',views.juegos,name="juegos"),
+    path('plazas_blandas/',views.plazas_blandas,name="plazas_blandas"),
+    path('inflables/',views.inflables,name="inflables"),
     path('contacto/',views.contacto,name="contacto"),
     path('admin/', admin.site.urls),
     

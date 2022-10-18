@@ -9,5 +9,11 @@ def home(request):
 def juegos(request):
     return render(request,"MundoKid/juegos.html")
 
+def plazas_blandas(request):
+    return render(request,"MundoKid/plazas_blandas.html")
+
+def inflables(request):
+    return render(request,"MundoKid/inflables.html")
+
 def contacto(request):
     return render(request,"MundoKid/contacto.html")
