@@ -1,0 +1,86 @@
+.tabla {
+	border-style: solid;
+	border-width: 1px;
+	border-color: #660033;
+	padding-left:8px;
+	padding-right:8px;
+	width:auto;
+}
+
+.tdTitu {
+	font-family: Tahoma, sans-serif, Arial;
+	font-size: 13px;
+	font-weight:bold;
+	color:#000;
+	height:20px;
+}
+
+.word {
+        font-family: Tahoma, sans-serif, Arial;
+        font-size: 12px;
+        color:#000;
+        height:20px;
+}
+
+.text {
+	font-family: Tahoma, sans-serif, Arial;
+	font-size: 11px;
+	color:#666;
+	margin: 3px 0 5px 0;
+	border-color:#000;
+	border-style: solid;
+	border-width: 1px;
+	width:200px;
+}
+
+.textarea {
+	font-family: Tahoma, sans-serif, Arial;
+	font-size: 11px;
+	color:#666;
+	margin: 3px 0 5px 0;
+	border-color:#000;
+	border-style: solid;
+	border-width: 1px;
+	width:200px;
+}
+
+.select {
+	font-family: Tahoma, sans-serif, Arial;
+	font-size: 11px;
+	color:#666;
+	margin: 3px 0 5px 0;
+	border-color:#000;
+	border-style: solid;
+	border-width: 1px;
+	width:200px;
+}
+
+.radio {
+	color:#666;
+	margin: 3px 0 5px 0;
+	text-align:center;
+	vertical-align:middle;
+}
+
+.file {
+	font-family: Tahoma, sans-serif, Arial;
+	font-size: 11px;
+	color:#666;
+	margin: 3px 0 5px 0;
+	border-color:#000;
+	border-style: solid;
+	border-width: 1px;
+	width:200px;
+}
+
+.submit {
+	font-family: Tahoma, sans-serif, Arial;
+	font-size: 11px;
+	color:#000;
+	margin: 3px 0 5px 0;
+	border-color:#000;
+	border-style: solid;
+	border-width: 1px;
+	background-color:#FFF;
+	cursor:pointer;
+}
