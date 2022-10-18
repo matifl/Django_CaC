@@ -14,7 +14,7 @@ pip install requeriments.txt
 ```
 
 ### TODO 
-    -Traernos todo el front (Hugo)
+    -Traernos todo el front (Hugo) (Hecho)
 
     (A definir)
     -Crear 4 templates
