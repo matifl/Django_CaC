@@ -9,7 +9,7 @@ class Articulo(models.Model):
     subcategoria=models.TextField(max_length=10)
     stock=models.IntegerField()
     precio=models.FloatField()
-    imagen_url=models.ImageField(verbose_name="Imagen",upload_to="articulos")
+    imagen_url=models.ImageField(upload_to="articulos")
     # created=models.DateTimeField(auto_now_add=True, verbose_name="Fecha de creación")
     # updated=models.DateTimeField(auto_now=True, verbose_name="Fecha de modificación")
     def __str__(self):

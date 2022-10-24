@@ -3,5 +3,27 @@
 {% block content %}
     <h2>Inflables</h2>
     <p>Galeria de imagenes con distintos tipos de juegos</p>
+
+     {% for articulo in articulos %}
+
+    <div class="row"> 
+
+    <!-- Proyecto 2 -->
+    <div class="row project">  	
+        <div class="col-lg-3 col-md-4 offset-lg-1">
+            <img class="img-fluid" src="{{articulo.imagen_url.url}}" alt="imagen1">
+         
+    </div>
+    <div class="col-lg-7 col-md-8">
+        <h2 class="section-heading title">{{articulo.nombre}}</h2>   
+        <p>{{articulo.precio}}</p>
+    </div>
+</div>
+</div>
+{% endfor %}
 {% endblock %}
+
+
+
+    
   
