@@ -15,16 +15,23 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from MundoKid import views
+from MundoKid import views as MundoKid_views
+from Articulos import views as Articulos_views
+from django.conf import settings
 
 urlpatterns = [
-    path('',views.home,name="home"),
-    path('home/',views.home,name="home"),
-    path('juegos/',views.juegos,name="juegos"),
-    path('plazas_blandas/',views.plazas_blandas,name="plazas_blandas"),
-    path('inflables/',views.inflables,name="inflables"),
-    path('contacto/',views.contacto,name="contacto"),
+    path('',MundoKid_views.home,name="home"),
+    path('home/',MundoKid_views.home,name="home"),
+    path('juegos/',Articulos_views.juegos,name="juegos"),
+    path('plazas_blandas/',Articulos_views.plazas_blandas,name="plazas_blandas"),
+    path('inflables/',Articulos_views.inflables,name="inflables"),
+    path('contacto/',MundoKid_views.contacto,name="contacto"),
     path('admin/', admin.site.urls),
     
 
 ]
+
+if settings.DEBUG:
+    from django.conf.urls.static import static
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    
