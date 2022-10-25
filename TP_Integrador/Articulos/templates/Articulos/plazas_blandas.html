@@ -1,26 +1,70 @@
 {% extends 'MundoKid/base.html' %}
 
 {% block content %}
-    <h2>Plazas blandas</h2>
-    <p>Galeria de imagenes con distintos tipos de juegos</p>
+	        <div class="breadcrumb-container">
+				<div class="container">
+					<ol class="breadcrumb">
+						<li><i class="fa fa-home pr-10"></i><a href="index.html">Home</a></li>
+						<li class="active">Plazas Blandas</li>
+					</ol>
+				</div>
+			</div>
+			<!-- breadcrumb end -->
 
-     {% for articulo in articulos %}
+			<!-- main-container start -->
+			<!-- ================ -->
+			<section class="main-container">
 
-    <div class="row"> 
+				<div class="container">
+					<div class="row">
 
-    <!-- Proyecto 2 -->
-    <div class="row project">  	
-        <div class="col-lg-3 col-md-4 offset-lg-1">
-            <img class="img-fluid" src="{{articulo.imagen_url.url}}" alt="imagen1">
-         
-    </div>
-    <div class="col-lg-7 col-md-8">
-        <h2 class="section-heading title">{{articulo.nombre}}</h2>   
-        <p>{{articulo.precio}}</p>
-    </div>
-</div>
-</div>
-{% endfor %}
+						<!-- main start -->
+						<!-- ================ -->
+						<div class="main col-md-12">
+
+							<!-- page-title start -->
+							<!-- ================ -->
+							<h1 class="page-title"><span>Plazas Blandas</span></h1>
+							<div class="separator-2"></div>
+							<!-- page-title end -->
+							<p class="lead">Nuestra propuesta de plazas blandas.</p>
+
+							<!-- isotope filters start -->
+							<div class="filters">
+								<ul class="nav nav-pills">
+									<li class="active"><a href="#" data-filter="*">Todos</a></li>
+									<li><a href="#" data-filter=".pb6">Plaza 6</a></li>
+									<li><a href="#" data-filter=".pb8">Plaza 8</a></li>
+									<li><a href="#" data-filter=".pb10">Plaza 10</a></li>
+									<li><a href="#" data-filter=".pbg">Plaza Grande</a></li>
+									<li><a href="#" data-filter=".pbb">Plaza Baby</a></li>
+                                </ul>
+							</div>
+							<!-- isotope filters end -->
+
+							<div class="isotope-container row grid-space-10">
+                                 {% for articulo in articulos %}
+								<div class="col-md-4 col-sm-6 isotope-item {{articulo.subcategoria}}">
+									<div class="image-box txt-box bordered text-center mb-20">
+										<div class="overlay-container">
+											<img src="{{articulo.imagen_url.url}}" alt="Plaza Blanda">
+											<div class="text">
+												<h3>{{articulo.nombre}}</h3>
+												<p>{{articulo.precio}}</p>
+											</div>
+										</div>
+									</div>
+								</div>
+                                 {% endfor %}
+                            </div>
+						</div>
+						<!-- main end -->
+
+					</div>
+				</div>
+			</section>
+			<!-- main-container end -->
+
 {% endblock %}
 
 

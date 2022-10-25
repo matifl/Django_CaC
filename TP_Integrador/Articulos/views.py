@@ -9,6 +9,7 @@ def juegos(request):
 
 def plazas_blandas(request):
     articulos=Articulo.objects.filter(categoria = 'pb')
+    # subcategoria=Articulo.objects.filter(categoria='pb')
     return render(request,"Articulos/plazas_blandas.html",{'articulos':articulos})
 
 def inflables(request):
