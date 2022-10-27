@@ -10,7 +10,7 @@ Se va a crear un venv y/o activar uno y se va instalar las librerias requeridas 
 una vez que tengamos el ambiente activado vamos a correr:
 
 ```bash
-pip install requeriments.txt
+pip install -r requeriments.txt
 ```
 
 ### TODO 
