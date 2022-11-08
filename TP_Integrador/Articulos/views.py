@@ -3,6 +3,8 @@ from .models import Articulo, Categoria, Subcategoria
 
 # Create your views here.
 
+# Mi cambio
+
 def juegos(request):
     articulos=Articulo.objects.filter(categoria = 'ju')
     subcategorias=Subcategoria.objects.filter(id_categoria = 'ju')
