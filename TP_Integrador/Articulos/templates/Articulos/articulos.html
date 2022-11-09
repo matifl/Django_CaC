@@ -1,14 +1,11 @@
 {% extends 'MundoKid/base.html' %}
 
 {% block content %}
-    <h2>Plazas blandas</h2>
-    <p>Galeria de imagenes con distintos tipos de juegos</p>
-
 	        <div class="breadcrumb-container">
 				<div class="container">
 					<ol class="breadcrumb">
-						<li><i class="fa fa-home pr-10"></i><a href={% url 'home' %}>Home</a></li>
-						<li class="active">Plazas Blandas</li>
+						<li><i class="fa fa-home pr-10"></i><a href="index.html">Home</a></li>
+						<li class="active">{{titulo}}</li>
 					</ol>
 				</div>
 			</div>
@@ -27,20 +24,20 @@
 
 							<!-- page-title start -->
 							<!-- ================ -->
-							<h1 class="page-title"><span>Plazas Blandas</span></h1>
+							<h1 class="page-title"><span>{{titulo}}</span></h1>
 							<div class="separator-2"></div>
 							<!-- page-title end -->
-							<p class="lead">Nuestra propuesta de plazas blandas.</p>
+							<p class="lead">Nuestra propuesta de {{titulo}}</p>
 
 							<!-- isotope filters start -->
 							<div class="filters">
 								<ul class="nav nav-pills">
+								 
 									<li class="active"><a href="#" data-filter="*">Todos</a></li>
-									<li><a href="#" data-filter=".pb6">Plaza 6</a></li>
-									<li><a href="#" data-filter=".pb8">Plaza 8</a></li>
-									<li><a href="#" data-filter=".pb10">Plaza 10</a></li>
-									<li><a href="#" data-filter=".pbg">Plaza Grande</a></li>
-									<li><a href="#" data-filter=".pbb">Plaza Baby</a></li>
+									 {% for subcategoria in subcategorias %}
+									<li><a href="#" data-filter='.{{subcategoria.id_subcategoria}}'>{{subcategoria.desc_subcategoria}}</a></li>
+									 {% endfor %}
+					
                                 </ul>
 							</div>
 							<!-- isotope filters end -->
@@ -50,7 +47,7 @@
 								<div class="col-md-4 col-sm-6 isotope-item {{articulo.subcategoria}}">
 									<div class="image-box txt-box bordered text-center mb-20">
 										<div class="overlay-container">
-											<img src="{{articulo.imagen_url.url}}" alt="Plaza Blanda">
+											<img src="{{articulo.imagen_url.url}}" alt="{{titulo}}">
 											<div class="text">
 												<h3>{{articulo.nombre}}</h3>
 												<p>{{articulo.precio}}</p>

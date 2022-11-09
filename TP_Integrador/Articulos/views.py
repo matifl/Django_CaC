@@ -3,15 +3,20 @@ from .models import Articulo, Categoria, Subcategoria
 
 # Create your views here.
 
+# Mi cambio
+
 def juegos(request):
     articulos=Articulo.objects.filter(categoria = 'ju')
-    return render(request,"Articulos/juegos.html",{'articulos':articulos})
+    subcategorias=Subcategoria.objects.filter(id_categoria = 'ju')
+    return render(request,"Articulos/articulos.html",{'articulos':articulos,'subcategorias' : subcategorias, 'titulo':'Juegos'})
 
 def plazas_blandas(request):
     articulos=Articulo.objects.filter(categoria = 'pb')
-    # subcategoria=Articulo.objects.filter(categoria='pb')
-    return render(request,"Articulos/plazas_blandas.html",{'articulos':articulos})
+    subcategorias=Subcategoria.objects.filter(id_categoria = 'pb')
+    return render(request,"Articulos/articulos.html",{'articulos':articulos,'subcategorias' : subcategorias, 'titulo':'Plazas Blandas'})
+
 
 def inflables(request):
     articulos=Articulo.objects.filter(categoria = 'in')
-    return render(request,"Articulos/inflables.html",{'articulos':articulos})
+    subcategorias=Subcategoria.objects.filter(id_categoria = 'in')
+    return render(request,"Articulos/articulos.html",{'articulos':articulos,'subcategorias' : subcategorias, 'titulo':'Inflables'})
