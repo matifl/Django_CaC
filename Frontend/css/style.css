@@ -4067,7 +4067,7 @@ fieldset[disabled] .form-control {
   padding: 0 20px;
   position: relative;
 }
-.overlay-container .text h3,
+.overlay-container .text h3, 
 .overlay-container .text h3 .small {
   margin-top: 0;
   color: #ffffff;
