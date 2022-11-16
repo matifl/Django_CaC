@@ -26,7 +26,7 @@ pip install -r requeriments.txt
 
     - Tareas pendientes:
     1) Mejorar el css del formulario de contacto: Hugo
-    2) Migrar bd de articulos de sqlite3 a postgresql: Cecilia
+    2) Migrar bd de articulos de sqlite3 a postgresql: Cecilia  (Hecho)
     3) Crear aplicacion que contenga un formulario basado en clases y asociado a un modelo nuevo
     4) El proyecto debe poseer al menos una página a la que solo se pueda acceder mediante autenticación y la misma debe ser validada tanto en el front-end como el back-end.
     5) Debe existir al menos una vista parametrizada.
