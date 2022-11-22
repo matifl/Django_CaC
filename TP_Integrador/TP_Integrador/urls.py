@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from MundoKid import views as MundoKid_views
 from Articulos import views as Articulos_views
 from django.conf import settings
@@ -27,8 +27,9 @@ urlpatterns = [
     path('inflables/',Articulos_views.inflables,name="inflables"),
     path('contacto/',MundoKid_views.contacto,name="contacto"),
     path('admin/', admin.site.urls),
-    
-
+    #path de auth
+    path('accounts/', include('django.contrib.auth.urls')),
+    path('accounts/', include('registration.urls')),
 ]
 
 if settings.DEBUG:
