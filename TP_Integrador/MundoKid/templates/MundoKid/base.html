@@ -137,34 +137,30 @@
 															<li ><a href="{% url 'inflables' %}">Inflables</a></li>  
 															<li ><a href="{% url 'juegos' %}">Juegos</a></li>
 														</ul>
-													</li>
-													<!-- mega-menu start -->
-													
-													
+													</li>													
 													<li >
 														<a href="{% url 'contacto' %}">Contacto</a>
-													</li>								
-													<!-- mega-menu end -->
-													
-												</ul>
-												<ul class="navbar-nav">
+													</li>
+
+													<!-- mega-menu start -->
 													{% if not request.user.is_authenticated %}
 													<li class="nav-item">
-													  <a class="nav-link" href="{% url 'login' %}"> Acceder </a>
+														<a class="nav-link" href="{% url 'login' %}"> Acceder </a>
 													</li>
 													<li class="nav-item">
-													  <a class="nav-link" href="{% url 'signup' %}"> Registro </a>
+														<a class="nav-link" href="{% url 'signup' %}"> Registro </a>
 													</li>
 													{% else %}
 													<li class="nav-item">
-													  <a class="nav-link" href="{% url 'logout' %}"> Salir </a>
+														<a class="nav-link" href="{% url 'logout' %}"> Salir </a>
 													</li>
-													{% endif %}
-												  </ul>
+													{% endif %}								
+													<!-- mega-menu end -->
+												</ul>
 												<!-- main-menu end -->
 												
 											</div>
-
+											
 										</div>
 									</nav>
 									<!-- navbar end -->
