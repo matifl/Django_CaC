@@ -6,3 +6,4 @@ class ContactForm(forms.Form):
     surname = forms.CharField(label='Apellido', max_length=100,required=True)
     mail = forms.EmailField(label='Email', max_length=100,required=True)
     comment = forms.CharField(label='Deja tu comentario!',widget=forms.Textarea,required=False)
+    
