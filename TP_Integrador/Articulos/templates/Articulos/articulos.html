@@ -4,7 +4,7 @@
 	        <div class="breadcrumb-container">
 				<div class="container">
 					<ol class="breadcrumb">
-						<li><i class="fa fa-home pr-10"></i><a href="index.html">Home</a></li>
+						<li><i class="fa fa-home pr-10"></i><a href="{% url 'home' %}">Home</a></li>
 						<li class="active">{{titulo}}</li>
 					</ol>
 				</div>
@@ -50,7 +50,7 @@
 											<img src="{{articulo.imagen_url.url}}" alt="{{titulo}}">
 											<div class="text">
 												<h3>{{articulo.nombre}}</h3>
-												<h4>{{articulo.precio}}</h4>
+												<h3>{{articulo.precio}}</h3>
 											</div>
 										</div>
 									</div>

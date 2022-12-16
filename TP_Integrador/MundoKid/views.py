@@ -1,7 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 from MundoKid import forms
-
 
 # Create your views here.
 
@@ -16,6 +14,4 @@ def contacto(request):
             pass
     else:
         pass
-        
-    
     return render(request,"MundoKid/contacto.html",{'form':form})

@@ -171,6 +171,14 @@ p.large {
   h3{font-size: 22px;}
   }
 
+.precio .text{
+  color:#000000;
+  background-color: rgb(256, 256, 256); 
+}  
+.enlace .text{
+  color:white;
+  background-color: rgb(0,0,0);  
+}
 a {
   color: #09afdf;
   -webkit-transition: all 0.2s ease-in-out;
@@ -7565,3 +7573,4 @@ h3 span{font-family: 'Patrick Hand', cursive; text-transform: initial; color: #f
 .banderines-fondo{background-image:url(../images/fondo-banderines.jpg); background-size: cover; background-position: 50% 0; background-repeat: no-repeat; overflow: hidden;}
 
 .txt-negro{color: #000;}
+

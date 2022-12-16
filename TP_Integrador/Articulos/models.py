@@ -1,24 +1,42 @@
 from tabnanny import verbose
 from django.db import models
+from django.urls import reverse
+
+categorias_id=[
+    ('in','Inflable'),
+    ('ju','Juego'),
+    ('pb','Plaza Blanda'),
+]
 
 # Create your models here.
 class Articulo(models.Model):
-    id=models.BigIntegerField(primary_key=True,verbose_name="Id_Artículo")
+    id=models.AutoField(primary_key=True,verbose_name="Id_Artículo")
     nombre=models.TextField(max_length=40)
-    categoria=models.CharField(max_length=2)
-    subcategoria=models.TextField(max_length=10)
+    categoria=models.CharField(
+        models.ForeignKey('Categoria',on_delete=models.CASCADE),
+        max_length=2, null=False, blank=False,
+        choices=categorias_id,
+        default='in')
+    subcategoria=models.TextField(
+        models.ForeignKey('Subcategoria',on_delete=models.CASCADE),
+        null=False, blank=False,
+        # choices=subcategorias_id,
+        max_length=10)
     stock=models.IntegerField()
     precio=models.FloatField()
-    imagen_url=models.ImageField(upload_to="articulos")
-    # created=models.DateTimeField(auto_now_add=True, verbose_name="Fecha de creación")
-    # updated=models.DateTimeField(auto_now=True, verbose_name="Fecha de modificación")
+    imagen_url=models.ImageField(upload_to="articulos", null=True, blank=True)
+
     def __str__(self):
         return self.nombre
+    
+    # def get_absolute_url(self):
+    #     return reverse('articulo_detail', kwargs={'id': self.id})
         
     class Meta:
         verbose_name ="articulo"
         verbose_name_plural="articulos"
-        # ordering= ["id"]
+        ordering= ['id']
+    
 
     
 class Categoria(models.Model):
@@ -30,7 +48,11 @@ class Categoria(models.Model):
 
 class Subcategoria(models.Model):
     id_subcategoria=models.TextField(primary_key=True,max_length=10,verbose_name="Id Subcategoría")
-    id_categoria=models.CharField(max_length=2,verbose_name="Id_Categoría")
+    id_categoria=models.CharField(
+        models.ForeignKey('Categoria',on_delete=models.CASCADE),
+        max_length=2, null=False, blank=False,
+        choices=categorias_id,
+        default='in')
     desc_subcategoria=models.TextField(max_length=40,verbose_name="Descripción Subcategoría")
 
     def __str__(self):
