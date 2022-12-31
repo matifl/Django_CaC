@@ -28,5 +28,5 @@ python manage.py migrate
 Eso va a correr todas las migraciones que necesitas para poder levantar el proyecto, una vez terminado el comando, corremos
 
 ```python
-python manage.py 
+python manage.py runserver
 ```
