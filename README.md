@@ -13,21 +13,20 @@ una vez que tengamos el ambiente activado vamos a correr:
 pip install -r requeriments.txt
 ```
 
-### TODO 
-    -Traernos todo el front (Hugo) (Hecho)
+### Levantar el proyecto
 
-    -Crear 4 templates (Hecho)
-        --Home
-        --Articulos
-        --Contacto
-        --Base (Header y Footer)
+Tenes que pararte en la carpeta TP_Integrador con el virtualenv que creaste prendido.
 
-    -En caso de necesitar modificar el settings.py de TP_Integrador
+En settings.py vas a tener que modificar la configuracion que tiene DATABASES actualmente mockeada para que apunte a tu base de datos
+una vez termines de configurar los pasos para que se conecte a tu base de datos podemos correr las migraciones
 
-    - Tareas pendientes:
-    1) Mejorar el css del formulario de contacto: Hugo
-    2) Migrar bd de articulos de sqlite3 a postgresql: Cecilia  (Hecho)
-    3) Crear aplicacion que contenga un formulario basado en clases y asociado a un modelo nuevo (Diego)
-    4) El proyecto debe poseer al menos una página a la que solo se pueda acceder mediante autenticación y la misma debe ser validada tanto en el front-end como el back-end. (Cecilia)
-    5) Debe existir al menos una vista parametrizada. (Mati)
-    6) Debe existir al menos un filtro aplicado. (Hugo)
+```python
+python manage.py migrate
+```
+
+
+Eso va a correr todas las migraciones que necesitas para poder levantar el proyecto, una vez terminado el comando, corremos
+
+```python
+python manage.py runserver
+```
