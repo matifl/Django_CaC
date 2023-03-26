@@ -1,7 +1,7 @@
 {% extends 'MundoKid/base.html' %}
 {% load static %}
 {% block content %}
-	        <div class="breadcrumb-container">
+			<div class="breadcrumb-container">
 				<div class="container">
 					<ol class="breadcrumb">
 						<li><i class="fa fa-home pr-10"></i><a href="{% url 'home' %}">Home</a></li>
@@ -42,6 +42,7 @@
 							</div>
 							<!-- isotope filters end -->
 							<div class="isotope-container row grid-space-10">
+							{% load static %}
                                 {% for articulo in articulos %}
 								<div class="col-md-4 col-sm-6 isotope-item {{articulo.subcategoria}}">
 									<div class="image-box txt-box bordered text-center mb-20">

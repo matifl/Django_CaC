@@ -17,7 +17,7 @@
               <div class="row p-1">
                 <div class="col-md-12">
               {% if articulo.imagen_url %}
-                <img src="{{articulo.imagen_url.url}}" class="img-fluid">
+                <img src="{{articulo.imagen_url.url}}" alt="{{titulo}}" class="img-fluid">
               {% else %}
                 <img src="{% static 'gestion/img/no-img.jpg' %}" class="img-fluid">
               {% endif %}

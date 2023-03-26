@@ -14,6 +14,11 @@ categorias_id=[
 #     old_instance.imagen_url.delete()
 #     return 'Articulos/' + filename
 
+def custom_upload_to(instance, filename):
+    old_instance = Articulo.objects.get(pk=instance.pk)
+    old_instance.imagen_url.delete()
+    return 'articulo/' + filename
+
 # Create your models here.
 class Articulo(models.Model):
     id=models.AutoField(primary_key=True,verbose_name="Id_Artículo")
@@ -38,7 +43,7 @@ class Articulo(models.Model):
     class Meta:
         verbose_name ="articulo"
         verbose_name_plural="articulos"
-        ordering= ['id']
+        ordering= ['nombre']
     
 
     
