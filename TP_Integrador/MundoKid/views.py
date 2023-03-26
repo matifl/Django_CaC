@@ -5,11 +5,11 @@ from MundoKid import forms
 
 def home(request):   
     return render(request,"MundoKid/home.html")
-   
+
 
 def contacto(request):
     form = forms.ContactForm()
-    if request.method == 'post':
+    if request.method == 'POST':
         if forms.ContactForm.is_valid():
             pass
     else:

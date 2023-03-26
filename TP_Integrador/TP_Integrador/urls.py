@@ -19,7 +19,7 @@ from MundoKid import views as MundoKid_views
 from Articulos import views as Articulos_views
 from django.conf import settings
 from Articulos.urls import articulos_patterns
-
+from django.conf.urls.static import static
 urlpatterns = [
     path('',MundoKid_views.home,name="home"),
     path('home/',MundoKid_views.home,name="home"),
@@ -32,10 +32,9 @@ urlpatterns = [
     #path de auth
     path('accounts/', include('django.contrib.auth.urls')),
     path('accounts/', include('registration.urls')),
-    
 ]
 
 if settings.DEBUG:
-    from django.conf.urls.static import static
+    #from django.conf.urls.static import static
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
     

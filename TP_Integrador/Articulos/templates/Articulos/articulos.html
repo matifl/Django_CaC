@@ -1,5 +1,5 @@
 {% extends 'MundoKid/base.html' %}
-
+{% load static %}
 {% block content %}
 	        <div class="breadcrumb-container">
 				<div class="container">
@@ -32,22 +32,21 @@
 							<!-- isotope filters start -->
 							<div class="filters">
 								<ul class="nav nav-pills">
-								 
+								
 									<li class="active"><a href="#" data-filter="*">Todos</a></li>
-									 {% for subcategoria in subcategorias %}
+									{% for subcategoria in subcategorias %}
 									<li><a href="#" data-filter='.{{subcategoria.id_subcategoria}}'>{{subcategoria.desc_subcategoria}}</a></li>
-									 {% endfor %}
+									{% endfor %}
 					
                                 </ul>
 							</div>
 							<!-- isotope filters end -->
-
 							<div class="isotope-container row grid-space-10">
-                                 {% for articulo in articulos %}
+                                {% for articulo in articulos %}
 								<div class="col-md-4 col-sm-6 isotope-item {{articulo.subcategoria}}">
 									<div class="image-box txt-box bordered text-center mb-20">
 										<div class="overlay-container">
-											<img src="{{articulo.imagen_url.url}}" alt="{{titulo}}">
+											<img src="{{ articulo.imagen_url.url }}" alt="{{titulo}}">
 											<div class="text">
 												<h3>{{articulo.nombre}}</h3>
 												<h3>{{articulo.precio}}</h3>
@@ -55,14 +54,12 @@
 										</div>
 									</div>
 								</div>
-                                 {% endfor %}
+                                {% endfor %}
                             </div>
 						</div>
 						<!-- main end -->
-
 					</div>
 				</div>
 			</section>
 			<!-- main-container end -->
-
 {% endblock %}

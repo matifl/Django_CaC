@@ -7,5 +7,5 @@ articulos_patterns = ([
     path('create', ArticuloCreate.as_view(), name='create'),   
     path('update/<int:pk>/', ArticuloUpdate.as_view(), name='update'),
     path('delete/<int:pk>/', ArticuloDelete.as_view(), name='delete'),
-], "articulos")
+], 'articulos')
 

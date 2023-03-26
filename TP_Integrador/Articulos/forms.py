@@ -19,9 +19,9 @@ class ArticuloForm(forms.ModelForm):
             # 'subcategoria': forms.Select(attrs={'class':'form-control'}),
             'precio': forms.NumberInput(attrs={'class':'form-control', 'placeholder':'Precio'}),
             'stock': forms.NumberInput(attrs={'class':'form-control','placeholder':'Stock'}),
-            'imagen':forms.ImageField(allow_empty_file='static/Articulos/img/no-img.jpg')
+            'imagen':forms.ImageField(allow_empty_file='True'),
         }
         labels = {
-            'nombre':'', 'categoria':'', 'subcategoria':'', 'precio':'', 'stock':'', 'imagen':''
+            'nombre':'', 'categoria':'', 'subcategoria':'', 'precio':'', 'stock':'', 'imagen':'',
         }
 
