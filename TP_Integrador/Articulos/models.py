@@ -9,11 +9,6 @@ categorias_id=[
 ]
 
 
-# def custom_upload_to(instance, filename):
-#     old_instance = Articulo.objects.get(pk=instance.pk)
-#     old_instance.imagen_url.delete()
-#     return 'Articulos/' + filename
-
 def custom_upload_to(instance, filename):
     old_instance = Articulo.objects.get(pk=instance.pk)
     old_instance.imagen_url.delete()
