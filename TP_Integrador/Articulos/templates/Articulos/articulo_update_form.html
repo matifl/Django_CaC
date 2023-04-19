@@ -15,11 +15,12 @@
                         </a>
                     </p>
                     {% endif %}
-                    <form action="" method="post">{% csrf_token %}
+                    <form action="" method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
                         {{ form.as_p }}
-                  <div class="text-center">
-                    <input type="submit" class="btn btn-primary btn-block" value="Actualizar página" />
-                  </div>               
+                    <div class="text-center">
+                        <input type="submit" class="btn btn-primary btn-block" value="Actualizar página" />
+                    </div>               
                 </form>
                 </div>
             </div>

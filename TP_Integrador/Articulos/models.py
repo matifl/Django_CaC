@@ -8,6 +8,12 @@ categorias_id=[
     ('pb','Plaza Blanda'),
 ]
 
+
+def custom_upload_to(instance, filename):
+    old_instance = Articulo.objects.get(pk=instance.pk)
+    old_instance.imagen_url.delete()
+    return 'articulo/' + filename
+
 # Create your models here.
 class Articulo(models.Model):
     id=models.AutoField(primary_key=True,verbose_name="Id_Artículo")
@@ -24,18 +30,15 @@ class Articulo(models.Model):
         max_length=10)
     stock=models.IntegerField()
     precio=models.FloatField()
-    imagen_url=models.ImageField(upload_to="articulos", null=True, blank=True)
+    imagen_url = models.ImageField(upload_to='articulos', null=True, blank=True, default='No-Image-Placeholder.svg')
 
     def __str__(self):
         return self.nombre
     
-    # def get_absolute_url(self):
-    #     return reverse('articulo_detail', kwargs={'id': self.id})
-        
     class Meta:
         verbose_name ="articulo"
         verbose_name_plural="articulos"
-        ordering= ['id']
+        ordering= ['nombre']
     
 
     
